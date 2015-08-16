@@ -12,3 +12,11 @@
 hs_err_pid*
 *.iml
 mess/
+/bin/
+
+
+build/
+# eclipse
+.settings/
+.project
+.classpath

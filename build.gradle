@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+}
+
+sourceSets.main {
+    java.srcDir 'java'
+    resources.srcDir 'res'
+    compileClasspath += rootProject.sourceSets.main.compileClasspath
+}
