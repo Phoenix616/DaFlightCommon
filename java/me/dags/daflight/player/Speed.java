@@ -55,6 +55,7 @@ public class Speed
     public Speed setBoost(boolean b)
     {
         boost = b;
+        updateSpeed();
         return this;
     }
 
