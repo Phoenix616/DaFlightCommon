@@ -82,10 +82,9 @@ public class Speed
         return this;
     }
 
-    public void toggleBoost()
+    public Speed toggleBoost()
     {
-        boost = ! boost;
-        updateSpeed();
+        return setBoost(!boost);
     }
 
     public SpeedType getType()
