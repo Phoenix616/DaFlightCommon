@@ -112,6 +112,9 @@ public class Config
     @Expose
     @SerializedName("Disable_FOV")
     public boolean disableFov = true;
+    @Expose
+    @SerializedName("Enable_Step")
+    public boolean enableStep = false;
 
     /**
      * Parameters

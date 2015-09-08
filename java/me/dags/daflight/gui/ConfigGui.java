@@ -48,6 +48,7 @@ public abstract class ConfigGui extends GuiScreen
     private ToggleButton perServer;
     private ToggleButton textShadow;
     private ToggleButton disableFov;
+    private ToggleButton enableStep;
 
     private Slider flySpeed;
     private Slider flyMultiplier;
@@ -128,6 +129,7 @@ public abstract class ConfigGui extends GuiScreen
         uiElements.add(perServer = new ToggleButton(1, xLeft, y += 21, 100, 20, "PerServer", DaFlight.getGlobalConfig().perServerConfig()));
         uiElements.add(textShadow = new ToggleButton(1, xLeft + 102, y, 99, 20, "TextShadow", config.textShadow));
         uiElements.add(disableFov = new ToggleButton(1, xLeft, y += 21, 100, 20, "DisableFOV", config.disableFov));
+        uiElements.add(enableStep = new ToggleButton(1, xLeft +102, y, 99, 20, "EnableStep", config.enableStep));
 
         int w1 = 156;
         int w2 = columnWidth - w1 - 1;
@@ -183,6 +185,7 @@ public abstract class ConfigGui extends GuiScreen
         perServer.addToolTip(new ToolTip("PerServerConfigs", "Creates a unique settings 'profile' for each", "server that you visit."));
         textShadow.addToolTip(new ToolTip("StatusTextShadow", "Draw the mod statuses with or", "without text shadow."));
         disableFov.addToolTip(new ToolTip("DisableFov", "Prevents the FOV from changing", "when flight is toggled on/off."));
+        enableStep.addToolTip(new ToolTip("EnableStep", "Enables stepping up 1m high", "blocks without jumping."));
 
         flyKey.addToolTip(new ToolTip("Fly", "Enable/Disable FlyMod with this key."));
         sprintKey.addToolTip(new ToolTip("Sprint", "Enable/Disable SprintMod with this key. Is only", "active whilst FlyMod is off."));
@@ -306,6 +309,7 @@ public abstract class ConfigGui extends GuiScreen
         config.showHud = showHud.getToggleState();
         config.textShadow = textShadow.getToggleState();
         config.disableFov = disableFov.getToggleState();
+        config.enableStep = enableStep.getToggleState();
 
         config.flySpeed = flySpeed.getValue() / 10F;
         config.flySpeedMult = flyMultiplier.getValue();
