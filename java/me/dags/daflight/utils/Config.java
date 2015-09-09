@@ -115,6 +115,9 @@ public class Config
     @Expose
     @SerializedName("Enable_Step")
     public boolean enableStep = false;
+    @Expose
+    @SerializedName("Disable_Creative_Flight")
+    public boolean disableCreativeFlight = true;
 
     /**
      * Parameters
