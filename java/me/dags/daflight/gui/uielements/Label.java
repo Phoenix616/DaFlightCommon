@@ -24,7 +24,7 @@ package me.dags.daflight.gui.uielements;
 
 import me.dags.daflight.DaFlight;
 import me.dags.daflightapi.ui.element.UIElement;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 public class Label implements UIElement
 {
@@ -44,7 +44,7 @@ public class Label implements UIElement
         defaultY = y;
     }
 
-    public Label setColour(EnumChatFormatting e)
+    public Label setColour(TextFormatting e)
     {
         color = e.toString();
         return this;

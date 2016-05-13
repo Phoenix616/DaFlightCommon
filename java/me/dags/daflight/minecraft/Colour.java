@@ -22,7 +22,7 @@
 
 package me.dags.daflight.minecraft;
 
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 /**
  * @author dags_ <dags@dags.me>
@@ -47,7 +47,7 @@ public class Colour
         String value = addColour(s);
         if (value.equals(s))
         {
-            return EnumChatFormatting.RESET + s;
+            return TextFormatting.RESET + s;
         }
         return value;
     }

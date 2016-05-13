@@ -22,7 +22,7 @@ import me.dags.daflightapi.ui.UIHelper;
 import me.dags.daflightapi.ui.element.IEntryBox;
 import me.dags.daflightapi.ui.element.UIElement;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
@@ -122,7 +122,7 @@ public abstract class ConfigGui extends GuiScreen
         // Left column
         int y = yTop;
         uiElements.add(logo.setXY((displayWidth / 2) - (logo.getWidth() / 2), yTop - 35));
-        uiElements.add(new Label(xLeft, y, "Preferences").setColour(EnumChatFormatting.DARK_AQUA));
+        uiElements.add(new Label(xLeft, y, "Preferences").setColour(TextFormatting.DARK_AQUA));
         uiElements.add(disable = new ToggleButton(1, xLeft, y += 11, 100, 20, "Disabled", config.disabled));
         uiElements.add(flight3D = new ToggleButton(1, xLeft + 102, y, 99, 20, "3DFlight", config.threeDFlight));
         uiElements.add(showHud = new ToggleButton(1, xLeft, y += 21, 100, 20, "ShowHUD", config.showHud));
@@ -135,7 +135,7 @@ public abstract class ConfigGui extends GuiScreen
 
         int w1 = 156;
         int w2 = columnWidth - w1 - 1;
-        uiElements.add(new Label(xLeft, y += 31, "KeyBinds").setColour(EnumChatFormatting.DARK_AQUA));
+        uiElements.add(new Label(xLeft, y += 31, "KeyBinds").setColour(TextFormatting.DARK_AQUA));
         uiElements.add(flyKey = new BindButton(xLeft, y += 11, w1, 20, false, "Fly", config.flyKey, "F"));
         uiElements.add(flyHold = new ToggleButton(1, xLeft + w1 + 1, y, w2, 20, "Hold", config.flyIsToggle, new String[]{"Hold", "Toggle"}));
         uiElements.add(sprintKey = new BindButton(xLeft, y += 21, w1, 20, false, "Sprint", config.sprintKey, "R"));
@@ -156,7 +156,7 @@ public abstract class ConfigGui extends GuiScreen
         // Right column
         y = singleColumn ? y + 31 : yTop;
         DFController DFController = DaFlight.get().DFController;
-        uiElements.add(new Label(xRight, y, "Modifiers").setColour(EnumChatFormatting.DARK_AQUA));
+        uiElements.add(new Label(xRight, y, "Modifiers").setColour(TextFormatting.DARK_AQUA));
         uiElements.add(flySpeed = new Slider(1, xRight, y += 11, 0F, DFController.flySpeed.getMaxBaseSpeed(), 1F, 200).setDisplayString("FlySpeed").setDefaultValue(config.flySpeed * 10));
         uiElements.add(flyMultiplier = new Slider(1, xRight, y += 21, 0F, DFController.flySpeed.getMaxMultiplier(), 5F, 200).setDisplayString("FlySpeedMultiplier").setDefaultValue(config.flySpeedMult));
         uiElements.add(flySmoothing = new Slider(1, xRight, y += 21, 0F, 1F, 0.7F, 200).setDisplayString("FlySmoothing").setDefaultValue(config.flySmoothing));
@@ -165,7 +165,7 @@ public abstract class ConfigGui extends GuiScreen
         uiElements.add(jumpMultiplier = new Slider(1, xRight, y += 21, 0F, 1F, 0.75F, 200).setDisplayString("JumpMultiplier").setDefaultValue(config.jumpModifier));
         uiElements.add(leftRightMultiplier = new Slider(1, xRight, y += 21, 0F, 1F, 0.85F, 200).setDisplayString("Left/RightMultiplier").setDefaultValue(config.lrModifier));
 
-        uiElements.add(new Label(xRight, y += 31, "Statuses").setColour(EnumChatFormatting.DARK_AQUA));
+        uiElements.add(new Label(xRight, y += 31, "Statuses").setColour(TextFormatting.DARK_AQUA));
         UIHelper helper = DaFlight.getUIHelper();
         uiElements.add(flyStatus = helper.getEntryBox(xRight, y += 11, 200, 17, "Flight", "f", true).setString(config.flightStatus));
         uiElements.add(cineStatus = helper.getEntryBox(xRight, y += 21, 200, 17, "CineFlight", "c",true).setString(config.cineFlightStatus));

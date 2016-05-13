@@ -24,7 +24,7 @@ package me.dags.daflight.gui.uielements;
 
 import me.dags.daflight.DaFlight;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 /**
  * @author dags_ <dags@dags.me>
@@ -37,10 +37,10 @@ public class ToolTip extends Gui
     public ToolTip(String title, String... lines)
     {
         this.lines = new String[lines.length + 1];
-        this.lines[0] = EnumChatFormatting.DARK_AQUA + title;
+        this.lines[0] = TextFormatting.DARK_AQUA + title;
         for (int i = 0; i < lines.length; i++)
         {
-            this.lines[i + 1] = EnumChatFormatting.GRAY + lines[i];
+            this.lines[i + 1] = TextFormatting.GRAY + lines[i];
         }
     }
 

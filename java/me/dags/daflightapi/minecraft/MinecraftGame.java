@@ -5,7 +5,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.settings.GameSettings;
-import net.minecraft.util.IChatComponent;
+import net.minecraft.util.text.ITextComponent;
 
 /**
  * @author dags_ <dags@dags.me>
@@ -25,7 +25,7 @@ public interface MinecraftGame
 
     public boolean onSolidBlock();
 
-    public IChatComponent getMessage(String s);
+    public ITextComponent getMessage(String s);
 
     public void setInvulnerable(boolean invulnerable);
 
