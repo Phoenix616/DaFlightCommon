@@ -25,7 +25,7 @@ package me.dags.daflight.gui.uielements;
 import me.dags.daflight.DaFlight;
 import me.dags.daflightapi.ui.element.UIElement;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import org.lwjgl.input.Keyboard;
 
 public class BindButton extends GuiButton implements UIElement
@@ -49,7 +49,7 @@ public class BindButton extends GuiButton implements UIElement
 
     public String getDisplayString()
     {
-        return active ? EnumChatFormatting.RED + name + ":" : name + ": " + value;
+        return active ? TextFormatting.RED + name + ":" : name + ": " + value;
     }
 
     public void setValue(String s)

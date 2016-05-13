@@ -28,7 +28,7 @@ import me.dags.daflightapi.ui.element.UIElement;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiOptionSlider;
 import net.minecraft.client.settings.GameSettings;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.MathHelper;
 import org.lwjgl.opengl.GL11;
 
 import java.text.DecimalFormat;
